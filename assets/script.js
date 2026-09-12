@@ -1,6 +1,27 @@
 const toggle = document.querySelector('.nav-toggle'), links = document.querySelector('.nav-links');
-if (toggle && links) { toggle.addEventListener('click', () => { links.classList.toggle('open'); toggle.setAttribute('aria-expanded', links.classList.contains('open')) }) }
-document.querySelectorAll('.nav-links a').forEach(a => a.addEventListener('click', () => links?.classList.remove('open')));
+if (toggle && links) {
+  toggle.addEventListener('click', () => {
+    const isOpen = links.classList.toggle('open');
+    toggle.classList.toggle('active', isOpen);
+    toggle.setAttribute('aria-expanded', isOpen);
+    toggle.textContent = isOpen ? '✕' : '☰';
+  });
+  
+  document.addEventListener('click', (e) => {
+    if (!toggle.contains(e.target) && !links.contains(e.target) && links.classList.contains('open')) {
+      links.classList.remove('open');
+      toggle.classList.remove('active');
+      toggle.setAttribute('aria-expanded', 'false');
+      toggle.textContent = '☰';
+    }
+  });
+}
+document.querySelectorAll('.nav-links a').forEach(a => a.addEventListener('click', () => {
+  links?.classList.remove('open');
+  toggle?.classList.remove('active');
+  toggle?.setAttribute('aria-expanded', 'false');
+  toggle && (toggle.textContent = '☰');
+}));
 
 const closeCoupon = document.querySelector('#closeCoupon');
 if (closeCoupon) closeCoupon.addEventListener('click', () => { document.querySelector('.coupon-bar')?.remove() });

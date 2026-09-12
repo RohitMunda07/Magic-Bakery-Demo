@@ -168,12 +168,28 @@ img {
   color: var(--pink)
 }
 
+.nav-links .btn {
+  background: #fff;
+  color: var(--pink);
+  border-color: var(--pink)
+}
+
+.nav-links .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(233, 30, 120, .16)
+}
+
 .nav-toggle {
   display: none;
   border: 0;
   background: none;
   font-size: 1.6rem;
-  color: var(--brown-dark)
+  color: var(--brown-dark);
+  transition: transform .3s ease
+}
+
+.nav-toggle.active {
+  transform: rotate(90deg)
 }
 
 .cart-link {
@@ -1130,7 +1146,19 @@ qty button {
   }
 
   .nav-links.open {
-    display: flex
+    display: flex;
+    animation: slideDown .3s ease
+  }
+
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-10px)
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0)
+    }
   }
 
   .nav-links a {
