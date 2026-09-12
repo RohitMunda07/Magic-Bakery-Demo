@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description"
+        content="Magic Bakery & Confectionery — freshly baked happiness, cakes, pastries and sweet treats.">
+    <title>Menu | Magic Bakery & Confectionery</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/styles.css">
+</head>
+
+<body>
+    <div class="coupon-bar">
+        <div class="container coupon-inner"><span class="coupon-icon">🎁</span><span>Celebrate your sweet moments!
+                &nbsp; Use Code:</span><span class="coupon-code">GURU</span><span>and get <strong>30% OFF</strong> on
+                orders above ₹499</span><a class="coupon-order" href="menu.html">Order Now →</a><button id="closeCoupon"
+                class="coupon-close" aria-label="Close offer">×</button></div>
+    </div>
+    <header class="site-header">
+        <nav class="nav container" aria-label="Main navigation">
+            <a class="brand" href="index.html">Magic Bakery <small>& Confectionery</small></a><button class="nav-toggle"
+                aria-label="Open menu" aria-expanded="false">☰</button>
+            <div class="nav-links"><a class="" href="index.html">Home</a><a class="active" href="menu.html">Menu</a><a
+                    class="" href="gallery.html">Gallery</a><a class="" href="about.html">Our Story</a><a class=""
+                    href="contact.html">Contact</a><a class="cart-link " href="cart.html">🛒 Cart <span
+                        class="cart-count">0</span></a><a class="btn small" href="contact.html">Order Now</a></div>
+        </nav>
+    </header>
+    <main>
+        <section class="page-hero container">
+            <div class="eyebrow">The menu</div>
+            <h1>Pick your kind of magic.</h1>
+            <p>Choose a favourite, add it to your cart and build a sweet order. Product information and prices are
+                fictional placeholders for this demo.</p>
+        </section>
+        <section class="section container" style="padding-top:20px">
+            <div class="filters"><button class="filter active" data-filter="all">Everything</button><button
+                    class="filter" data-filter="cakes">Cakes</button><button class="filter"
+                    data-filter="pastries">Pastries</button><button class="filter" data-filter="sweets">Sweets</button>
+            </div>
+            <div class="product-grid">
+                <article class="product-card" data-category="cakes"><img
+                        src="https://images.pexels.com/photos/4409269/pexels-photo-4409269.jpeg?cs=srgb&dl=pexels-nadezhda-moryak-4409269.jpg&fm=jpg"
+                        alt="Velvet Cloud" loading="lazy">
+                    <div class="product-body">
+                        <div class="eyebrow">cakes</div>
+                        <h3>Velvet Cloud</h3>
+                        <p>Vanilla sponge, berry compote & silky cream.</p>
+                        <div class="product-meta"><strong class="price">₹1,099</strong><button class="btn pink"
+                                data-add="velvet-cloud" data-name="Velvet Cloud" data-price="1099"
+                                data-image="https://images.pexels.com/photos/4409269/pexels-photo-4409269.jpeg?cs=srgb&dl=pexels-nadezhda-moryak-4409269.jpg&fm=jpg"
+                                data-category="cakes">Add to cart</button></div>
+                    </div>
+                </article>
+                <article class="product-card" data-category="cakes"><img
+                        src="https://images.pexels.com/photos/21820905/pexels-photo-21820905.jpeg?cs=srgb&dl=pexels-beyza-555707524-21820905.jpg&fm=jpg"
+                        alt="Midnight Fudge" loading="lazy">
+                    <div class="product-body">
+                        <div class="eyebrow">cakes</div>
+                        <h3>Midnight Fudge</h3>
+                        <p>Dark chocolate layers with glossy ganache.</p>
+                        <div class="product-meta"><strong class="price">₹1,299</strong><button class="btn pink"
+                                data-add="midnight-fudge" data-name="Midnight Fudge" data-price="1299"
+                                data-image="https://images.pexels.com/photos/21820905/pexels-photo-21820905.jpeg?cs=srgb&dl=pexels-beyza-555707524-21820905.jpg&fm=jpg"
+                                data-category="cakes">Add to cart</button></div>
+                    </div>
+                </article>
+                <article class="product-card" data-category="cakes"><img
+                        src="https://images.pexels.com/photos/34104123/pexels-photo-34104123.png?cs=srgb&dl=pexels-aleson-padilha-945919991-34104123.jpg&fm=jpg"
+                        alt="Garden Party" loading="lazy">
+                    <div class="product-body">
+                        <div class="eyebrow">cakes</div>
+                        <h3>Garden Party</h3>
+                        <p>Lemon sponge, vanilla buttercream & seasonal flowers.</p>
+                        <div class="product-meta"><strong class="price">₹1,249</strong><button class="btn pink"
+                                data-add="garden-party" data-name="Garden Party" data-price="1249"
+                                data-image="https://images.pexels.com/photos/34104123/pexels-photo-34104123.png?cs=srgb&dl=pexels-aleson-padilha-945919991-34104123.jpg&fm=jpg"
+                                data-category="cakes">Add to cart</button></div>
+                    </div>
+                </article>
+                <article class="product-card" data-category="cakes"><img
+                        src="https://images.pexels.com/photos/19190625/pexels-photo-19190625.jpeg?cs=srgb&dl=pexels-krebsatka-19190625.jpg&fm=jpg"
+                        alt="Berry Wish" loading="lazy">
+                    <div class="product-body">
+                        <div class="eyebrow">cakes</div>
+                        <h3>Berry Wish</h3>
+                        <p>Strawberry cream cake with fresh berries.</p>
+                        <div class="product-meta"><strong class="price">₹1,199</strong><button class="btn pink"
+                                data-add="berry-wish" data-name="Berry Wish" data-price="1199"
+                                data-image="https://images.pexels.com/photos/19190625/pexels-photo-19190625.jpeg?cs=srgb&dl=pexels-krebsatka-19190625.jpg&fm=jpg"
+                                data-category="cakes">Add to cart</button></div>
+                    </div>
+                </article>
+                <article class="product-card" data-category="pastries"><img
+                        src="https://images.pexels.com/photos/34104123/pexels-photo-34104123.png?cs=srgb&dl=pexels-aleson-padilha-945919991-34104123.jpg&fm=jpg"
+                        alt="Butter Croissant" loading="lazy">
+                    <div class="product-body">
+                        <div class="eyebrow">pastries</div>
+                        <h3>Butter Croissant</h3>
+                        <p>Golden, flaky layers with a crisp finish.</p>
+                        <div class="product-meta"><strong class="price">₹110</strong><button class="btn pink"
+                                data-add="butter-croissant" data-name="Butter Croissant" data-price="110"
+                                data-image="https://images.pexels.com/photos/34104123/pexels-photo-34104123.png?cs=srgb&dl=pexels-aleson-padilha-945919991-34104123.jpg&fm=jpg"
+                                data-category="pastries">Add to cart</button></div>
+                    </div>
+                </article>
+                <article class="product-card" data-category="pastries"><img
+                        src="https://images.pexels.com/photos/8253100/pexels-photo-8253100.jpeg?cs=srgb&dl=pexels-danielnouri-8253100.jpg&fm=jpg"
+                        alt="Cinnamon Swirl" loading="lazy">
+                    <div class="product-body">
+                        <div class="eyebrow">pastries</div>
+                        <h3>Cinnamon Swirl</h3>
+                        <p>Soft spiral bun with brown sugar & cinnamon.</p>
+                        <div class="product-meta"><strong class="price">₹95</strong><button class="btn pink"
+                                data-add="cinnamon-swirl" data-name="Cinnamon Swirl" data-price="95"
+                                data-image="https://images.pexels.com/photos/8253100/pexels-photo-8253100.jpeg?cs=srgb&dl=pexels-danielnouri-8253100.jpg&fm=jpg"
+                                data-category="pastries">Add to cart</button></div>
+                    </div>
+                </article>
+                <article class="product-card" data-category="pastries"><img
+                        src="https://images.pexels.com/photos/19190625/pexels-photo-19190625.jpeg?cs=srgb&dl=pexels-krebsatka-19190625.jpg&fm=jpg"
+                        alt="Strawberry Danish" loading="lazy">
+                    <div class="product-body">
+                        <div class="eyebrow">pastries</div>
+                        <h3>Strawberry Danish</h3>
+                        <p>Buttery pastry, cream & strawberry glaze.</p>
+                        <div class="product-meta"><strong class="price">₹140</strong><button class="btn pink"
+                                data-add="strawberry-danish" data-name="Strawberry Danish" data-price="140"
+                                data-image="https://images.pexels.com/photos/19190625/pexels-photo-19190625.jpeg?cs=srgb&dl=pexels-krebsatka-19190625.jpg&fm=jpg"
+                                data-category="pastries">Add to cart</button></div>
+                    </div>
+                </article>
+                <article class="product-card" data-category="pastries"><img
+                        src="https://images.pexels.com/photos/17365318/pexels-photo-17365318.jpeg?cs=srgb&dl=pexels-elijah-urch-17365318.jpg&fm=jpg"
+                        alt="Chocolate Brownie" loading="lazy">
+                    <div class="product-body">
+                        <div class="eyebrow">pastries</div>
+                        <h3>Chocolate Brownie</h3>
+                        <p>Fudgy centre with a delicate crackly top.</p>
+                        <div class="product-meta"><strong class="price">₹90</strong><button class="btn pink"
+                                data-add="chocolate-brownie" data-name="Chocolate Brownie" data-price="90"
+                                data-image="https://images.pexels.com/photos/17365318/pexels-photo-17365318.jpeg?cs=srgb&dl=pexels-elijah-urch-17365318.jpg&fm=jpg"
+                                data-category="pastries">Add to cart</button></div>
+                    </div>
+                </article>
+                <article class="product-card" data-category="sweets"><img
+                        src="https://images.pexels.com/photos/575586/pexels-photo-575586.jpeg?cs=srgb&dl=pexels-mat-brown-150387-575586.jpg&fm=jpg"
+                        alt="Magic Macaron Box" loading="lazy">
+                    <div class="product-body">
+                        <div class="eyebrow">sweets</div>
+                        <h3>Magic Macaron Box</h3>
+                        <p>Six assorted pastel macarons.</p>
+                        <div class="product-meta"><strong class="price">₹420</strong><button class="btn pink"
+                                data-add="magic-macarons" data-name="Magic Macaron Box" data-price="420"
+                                data-image="https://images.pexels.com/photos/575586/pexels-photo-575586.jpeg?cs=srgb&dl=pexels-mat-brown-150387-575586.jpg&fm=jpg"
+                                data-category="sweets">Add to cart</button></div>
+                    </div>
+                </article>
+                <article class="product-card" data-category="sweets"><img
+                        src="https://images.pexels.com/photos/3983706/pexels-photo-3983706.jpeg?cs=srgb&dl=pexels-gustavo-fring-3983706.jpg&fm=jpg"
+                        alt="Celebration Cupcakes" loading="lazy">
+                    <div class="product-body">
+                        <div class="eyebrow">sweets</div>
+                        <h3>Celebration Cupcakes</h3>
+                        <p>Four decorated vanilla cupcakes.</p>
+                        <div class="product-meta"><strong class="price">₹360</strong><button class="btn pink"
+                                data-add="celebration-cupcakes" data-name="Celebration Cupcakes" data-price="360"
+                                data-image="https://images.pexels.com/photos/3983706/pexels-photo-3983706.jpeg?cs=srgb&dl=pexels-gustavo-fring-3983706.jpg&fm=jpg"
+                                data-category="sweets">Add to cart</button></div>
+                    </div>
+                </article>
+                <article class="product-card" data-category="sweets"><img
+                        src="https://images.pexels.com/photos/21820905/pexels-photo-21820905.jpeg?cs=srgb&dl=pexels-beyza-555707524-21820905.jpg&fm=jpg"
+                        alt="Chocolate Gift Box" loading="lazy">
+                    <div class="product-body">
+                        <div class="eyebrow">sweets</div>
+                        <h3>Chocolate Gift Box</h3>
+                        <p>Eight handcrafted chocolate bites.</p>
+                        <div class="product-meta"><strong class="price">₹520</strong><button class="btn pink"
+                                data-add="chocolate-gift-box" data-name="Chocolate Gift Box" data-price="520"
+                                data-image="https://images.pexels.com/photos/21820905/pexels-photo-21820905.jpeg?cs=srgb&dl=pexels-beyza-555707524-21820905.jpg&fm=jpg"
+                                data-category="sweets">Add to cart</button></div>
+                    </div>
+                </article>
+                <article class="product-card" data-category="sweets"><img
+                        src="https://images.pexels.com/photos/4409269/pexels-photo-4409269.jpeg?cs=srgb&dl=pexels-nadezhda-moryak-4409269.jpg&fm=jpg"
+                        alt="Berry Dessert Jar" loading="lazy">
+                    <div class="product-body">
+                        <div class="eyebrow">sweets</div>
+                        <h3>Berry Dessert Jar</h3>
+                        <p>Layers of sponge, cream and berry compote.</p>
+                        <div class="product-meta"><strong class="price">₹180</strong><button class="btn pink"
+                                data-add="berry-dessert-jar" data-name="Berry Dessert Jar" data-price="180"
+                                data-image="https://images.pexels.com/photos/4409269/pexels-photo-4409269.jpeg?cs=srgb&dl=pexels-nadezhda-moryak-4409269.jpg&fm=jpg"
+                                data-category="sweets">Add to cart</button></div>
+                    </div>
+                </article>
+            </div>
+            <div class="notice" style="margin-top:28px">🎁 Use code <strong>GURU</strong> for 30% off orders above ₹499
+                in this fictional concept. Connect a real coupon system before launch.</div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div>
+                <h3>Magic Bakery & Confectionery</h3>
+                <p>Handcrafted bakes, beautiful cakes and little moments of magic — made fresh for our neighborhood.</p>
+            </div>
+            <div>
+                <h3>Visit</h3>
+                <p>24 Maple Street<br>Sunshine Market District<br>Open Tue–Sun · 8am–8pm</p>
+            </div>
+            <div>
+                <h3>Say hello</h3>
+                <p><a href="tel:+919876543210">+91 98765 43210</a><br><a
+                        href="mailto:hello@magicbakery.example">hello@magicbakery.example</a></p>
+            </div>
+        </div>
+        <div class="container footer-bottom">Fictional concept website. Product names, prices, address and contact
+            details are placeholders. Image credits and assumptions are in README.md.</div>
+    </footer>
+    <script src="assets/script.js"></script>
+</body>
+
+</html>

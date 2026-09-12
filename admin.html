@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Magic Bakery admin dashboard for products, customers and order details.">
+    <title>Admin | Magic Bakery & Confectionery</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/styles.css">
+</head>
+
+<body>
+    <div class="coupon-bar">
+        <div class="container coupon-inner"><span class="coupon-icon">🎁</span><span>Celebrate your sweet moments!
+                &nbsp; Use Code:</span><span class="coupon-code">GURU</span><span>and get <strong>30% OFF</strong> on
+                orders above ₹499</span><a class="coupon-order" href="menu.html">Order Now →</a><button id="closeCoupon"
+                class="coupon-close" aria-label="Close offer">×</button></div>
+    </div>
+    <header class="site-header">
+        <nav class="nav container" aria-label="Main navigation">
+            <a class="brand" href="index.html">Magic Bakery <small>& Confectionery</small></a><button class="nav-toggle"
+                aria-label="Open menu" aria-expanded="false">☰</button>
+            <div class="nav-links"><a class="" href="index.html">Home</a><a class="" href="menu.html">Menu</a><a
+                    class="" href="gallery.html">Gallery</a><a class="" href="about.html">Our Story</a><a class=""
+                    href="contact.html">Contact</a><a class="active" href="admin.html">Admin</a><a class="cart-link " href="cart.html">🛒 Cart <span
+                        class="cart-count">0</span></a><a class="btn small" href="contact.html">Order Now</a></div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-hero container">
+            <div class="eyebrow">Bakery dashboard</div>
+            <h1>Admin overview</h1>
+            <p>Track the bakery catalog, customer details and the essentials needed to prepare a personalised order and future offer.</p>
+        </section>
+
+        <section class="section container admin-shell">
+            <div class="admin-grid">
+                <article class="admin-card">
+                    <h2>All products</h2>
+                    <table class="admin-table">
+                        <thead>
+                            <tr>
+                                <th>Product</th>
+                                <th>Category</th>
+                                <th>Price</th>
+                                <th>Availability</th>
+                            </tr>
+                        </thead>
+                        <tbody id="productTableBody"></tbody>
+                    </table>
+                </article>
+
+                <article class="admin-card">
+                    <h2>Customer details</h2>
+                    <div id="customerList" class="customer-list"></div>
+                </article>
+            </div>
+
+            <article class="admin-card">
+                <h2>Order details to save</h2>
+                <form id="adminOrderForm" class="order-form">
+                    <div class="input-grid">
+                        <label>
+                            Customer name
+                            <input type="text" name="customerName" placeholder="Jane Doe" required>
+                        </label>
+                        <label>
+                            Email address
+                            <input type="email" name="email" placeholder="jane@example.com" required>
+                        </label>
+                        <label>
+                            Phone number
+                            <input type="tel" name="phone" placeholder="+91 98xxxxxx" required>
+                        </label>
+                        <label>
+                            Preferred order date
+                            <input type="date" name="orderDate" required>
+                        </label>
+                        <label class="full">
+                            Delivery address
+                            <textarea name="address" placeholder="House no., street, area, city" required></textarea>
+                        </label>
+                        <label>
+                            Favourite product
+                            <select name="favoriteProduct">
+                                <option>Classic Vanilla Cake</option>
+                                <option>Chocolate Truffle Cake</option>
+                                <option>Blueberry Cheesecake</option>
+                                <option>Butter Croissant</option>
+                                <option>Red Velvet Cupcakes</option>
+                                <option>Seasonal Celebration Box</option>
+                            </select>
+                        </label>
+                        <label>
+                            Occasion
+                            <input type="text" name="occasion" placeholder="Birthday / Anniversary / Gift">
+                        </label>
+                        <label class="full">
+                            Order notes or customisation
+                            <textarea name="notes" placeholder="Preferred flavours, delivery instructions, personal message, special mention"></textarea>
+                        </label>
+                    </div>
+                    <div class="admin-actions">
+                        <button type="submit" class="btn pink">Save customer order details</button>
+                    </div>
+                </form>
+                <div id="adminNotice" class="notice admin-note" hidden></div>
+
+                <div class="saved-orders">
+                    <h3>Saved order records</h3>
+                    <ul id="savedOrderList" class="saved-order-list"></ul>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-brand-block">
+                <h3>Magic Bakery & Confectionery</h3>
+                <p>Handcrafted bakes, beautiful cakes and little moments of magic — made fresh for our neighborhood.</p>
+                <div class="footer-badges"><span>Fresh daily</span><span>Custom cakes</span></div>
+            </div>
+            <div>
+                <h3>Quick links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="about.html">Our Story</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Visit</h3>
+                <p>24 Maple Street<br>Sunshine Market District<br>Open Tue–Sun · 8am–8pm</p>
+            </div>
+            <div>
+                <h3>Say hello</h3>
+                <p><a href="tel:+919876543210">+91 98765 43210</a><br><a href="mailto:hello@magicbakery.example">hello@magicbakery.example</a></p>
+            </div>
+        </div>
+        <div class="container footer-bottom">Fictional concept website. Product names, prices, address and contact details are placeholders.</div>
+    </footer>
+
+    <script src="assets/script.js"></script>
+    <script>
+        const productCatalog = [
+            { name: 'Classic Vanilla Cake', category: 'Cakes', price: 1299, status: 'In stock' },
+            { name: 'Chocolate Truffle Cake', category: 'Cakes', price: 1499, status: 'Popular' },
+            { name: 'Blueberry Cheesecake', category: 'Cakes', price: 1599, status: 'Fresh batch' },
+            { name: 'Butter Croissant', category: 'Pastries', price: 259, status: 'Fresh today' },
+            { name: 'Almond Danish', category: 'Pastries', price: 299, status: 'Best seller' },
+            { name: 'Red Velvet Cupcakes', category: 'Cupcakes', price: 699, status: 'In stock' },
+            { name: 'Seasonal Celebration Box', category: 'Gift Boxes', price: 1899, status: 'Limited' },
+            { name: 'Mini Dessert Jar', category: 'Desserts', price: 399, status: 'Popular' }
+        ];
+
+        const customerDirectory = [
+            { name: 'Aisha Sharma', email: 'aisha.sharma@example.com', phone: '+91 98765 43210', address: '24 Maple Street, Sector 7, Bengaluru' },
+            { name: 'Nikhil Verma', email: 'nikhil.v@example.com', phone: '+91 98123 45678', address: '12 Orchard Lane, Pune' },
+            { name: 'Meera Iyer', email: 'meera.iyer@example.com', phone: '+91 99887 66554', address: '7 Willow Court, Kochi' },
+            { name: 'Rohan Patil', email: 'rohan.p@example.com', phone: '+91 90000 12345', address: '88 Rose Avenue, Mumbai' }
+        ];
+
+        const adminOrderKey = 'magicBakeryAdminOrders';
+
+        function renderProducts() {
+            const body = document.getElementById('productTableBody');
+            if (!body) return;
+            body.innerHTML = productCatalog.map(product => `
+                <tr>
+                    <td><strong>${product.name}</strong></td>
+                    <td>${product.category}</td>
+                    <td>₹${product.price.toLocaleString('en-IN')}</td>
+                    <td>${product.status}</td>
+                </tr>
+            `).join('');
+        }
+
+        function renderCustomers() {
+            const list = document.getElementById('customerList');
+            if (!list) return;
+            list.innerHTML = customerDirectory.map(customer => `
+                <div class="customer-item">
+                    <h3>${customer.name}</h3>
+                    <p><strong>Email:</strong> ${customer.email}</p>
+                    <p><strong>Phone:</strong> ${customer.phone}</p>
+                    <p><strong>Address:</strong> ${customer.address}</p>
+                </div>
+            `).join('');
+        }
+
+        function getSavedOrders() {
+            try {
+                return JSON.parse(localStorage.getItem(adminOrderKey) || '[]');
+            } catch {
+                return [];
+            }
+        }
+
+        function saveOrders(orders) {
+            localStorage.setItem(adminOrderKey, JSON.stringify(orders));
+        }
+
+        function renderSavedOrders() {
+            const list = document.getElementById('savedOrderList');
+            if (!list) return;
+            const orders = getSavedOrders();
+            if (!orders.length) {
+                list.innerHTML = '<li><strong>No saved records yet</strong><span>Submit the order details form to keep customer information for future offers.</span></li>';
+                return;
+            }
+
+            list.innerHTML = orders.map(order => `
+                <li>
+                    <strong>${order.customerName} · ${order.favoriteProduct}</strong>
+                    <span>${order.email} · ${order.phone}</span>
+                    <span>${order.address}</span>
+                    <span>Order date: ${order.orderDate || 'Not specified'} · Occasion: ${order.occasion || 'General'}</span>
+                </li>
+            `).join('');
+        }
+
+        document.getElementById('adminOrderForm')?.addEventListener('submit', (event) => {
+            event.preventDefault();
+            const form = event.currentTarget;
+            const formData = new FormData(form);
+            const record = Object.fromEntries(formData.entries());
+            const orders = getSavedOrders();
+            orders.unshift(record);
+            saveOrders(orders);
+            renderSavedOrders();
+
+            const notice = document.getElementById('adminNotice');
+            if (notice) {
+                notice.hidden = false;
+                notice.textContent = 'Customer and order details saved successfully for future bakery offers.';
+            }
+            form.reset();
+        });
+
+        renderProducts();
+        renderCustomers();
+        renderSavedOrders();
+    </script>
+</body>
+
+</html>
